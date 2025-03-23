@@ -89,7 +89,7 @@ const Index = () => {
       <Hero 
         title="Welcome to Manzil Lounge"
         subtitle="Experience comfort and convenience at our neat and quiet hotel near Kazhakoottom Railway Station, Trivandrum."
-        imageUrl="https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&q=80&w=2000"
+        imageUrl="/lovable-uploads/9b485332-9ab6-443d-8bc3-35b8f0c2a441.png"
       />
       
       {/* Features Section */}
@@ -352,3 +352,4 @@ const Index = () => {
 };
 
 export default Index;
+
