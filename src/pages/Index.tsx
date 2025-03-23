@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import Hero from '@/components/Hero';
@@ -18,7 +17,7 @@ const featuredRooms = [
     title: 'Premium Double Room',
     description: 'Spacious room with a comfortable double bed, workspace, and modern amenities for a relaxing stay.',
     price: 2500,
-    imageUrl: 'https://images.unsplash.com/photo-1590490360182-c33d57733427?auto=format&fit=crop&q=80&w=1000',
+    imageUrl: '/lovable-uploads/5a781ddd-6cf3-4507-9094-af891958222f.png',
     amenities: ['Free WiFi', 'Air Conditioning', 'LCD TV', 'Room Service'],
     roomType: 'premium' as const,
   },
@@ -27,16 +26,16 @@ const featuredRooms = [
     title: 'Deluxe Single Room',
     description: 'Cozy room with a single bed, perfect for solo travelers seeking comfort and convenience.',
     price: 1800,
-    imageUrl: 'https://images.unsplash.com/photo-1566665797739-1674de7a421a?auto=format&fit=crop&q=80&w=1000',
+    imageUrl: '/lovable-uploads/d650882c-efde-445a-ae60-176c5ac0facb.png',
     amenities: ['Free WiFi', 'Air Conditioning', 'Cable TV', 'Desk'],
     roomType: 'deluxe' as const,
   },
 ];
 
 const galleryImages = [
-  { url: 'https://images.unsplash.com/photo-1618773928121-c32242e63f39?auto=format&fit=crop&q=80&w=1000', alt: 'Hotel Exterior' },
-  { url: 'https://images.unsplash.com/photo-1590490360182-c33d57733427?auto=format&fit=crop&q=80&w=1000', alt: 'Premium Room' },
-  { url: 'https://images.unsplash.com/photo-1566665797739-1674de7a421a?auto=format&fit=crop&q=80&w=1000', alt: 'Deluxe Room' },
+  { url: '/lovable-uploads/36a930c0-f50c-4309-b3eb-641bdaae2cf7.png', alt: 'Hotel Reception' },
+  { url: '/lovable-uploads/5a781ddd-6cf3-4507-9094-af891958222f.png', alt: 'Premium Room' },
+  { url: '/lovable-uploads/d650882c-efde-445a-ae60-176c5ac0facb.png', alt: 'Deluxe Room' },
 ];
 
 const testimonials = [
@@ -352,4 +351,3 @@ const Index = () => {
 };
 
 export default Index;
-

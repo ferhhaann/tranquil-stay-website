@@ -55,7 +55,7 @@ const RoomCard: React.FC<RoomCardProps> = ({
       <div className="relative h-64 overflow-hidden">
         <div 
           className={cn(
-            "w-full h-full object-cover transition-all duration-700 ease-out",
+            "w-full h-full transition-all duration-700 ease-out",
             isHovered ? "scale-110" : "scale-100",
             !isLoaded ? "blur-sm" : "blur-0"
           )}

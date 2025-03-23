@@ -7,37 +7,30 @@ import Hero from '@/components/Hero';
 import Gallery from '@/components/Gallery';
 import { BedDouble, UtensilsCrossed, Home, MapPin, Coffee } from 'lucide-react';
 
-// Sample gallery images
+// Hotel gallery images
 const hotelImages = {
   exterior: [
-    { url: 'https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&q=80&w=1000', alt: 'Hotel Exterior - Front View' },
-    { url: 'https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?auto=format&fit=crop&q=80&w=1000', alt: 'Hotel Entrance' },
-    { url: 'https://images.unsplash.com/photo-1562778612-e1e0cda9915c?auto=format&fit=crop&q=80&w=1000', alt: 'Hotel Building - Night View' },
+    { url: '/lovable-uploads/36a930c0-f50c-4309-b3eb-641bdaae2cf7.png', alt: 'Hotel Reception Area' },
+    { url: '/lovable-uploads/9b485332-9ab6-443d-8bc3-35b8f0c2a441.png', alt: 'Hotel Exterior View' },
   ],
   rooms: [
-    { url: 'https://images.unsplash.com/photo-1590490360182-c33d57733427?auto=format&fit=crop&q=80&w=1000', alt: 'Premium Double Room' },
-    { url: 'https://images.unsplash.com/photo-1595576508898-0ad5c879a061?auto=format&fit=crop&q=80&w=1000', alt: 'Premium Twin Room' },
-    { url: 'https://images.unsplash.com/photo-1566665797739-1674de7a421a?auto=format&fit=crop&q=80&w=1000', alt: 'Deluxe Single Room' },
-    { url: 'https://images.unsplash.com/photo-1598928636135-d146006ff4be?auto=format&fit=crop&q=80&w=1000', alt: 'Deluxe Double Room' },
-    { url: 'https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&q=80&w=1000', alt: 'Deluxe Budget Room' },
-    { url: 'https://images.unsplash.com/photo-1566195992011-5f6b21e539aa?auto=format&fit=crop&q=80&w=1000', alt: 'Deluxe Compact Room' },
+    { url: '/lovable-uploads/5a781ddd-6cf3-4507-9094-af891958222f.png', alt: 'Premium Double Room' },
+    { url: '/lovable-uploads/d650882c-efde-445a-ae60-176c5ac0facb.png', alt: 'Deluxe Room' },
   ],
   dining: [
     { url: 'https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&q=80&w=1000', alt: 'Dining Area' },
     { url: 'https://images.unsplash.com/photo-1551024601-06b3aed95fb3?auto=format&fit=crop&q=80&w=1000', alt: 'Breakfast Spread' },
-    { url: 'https://images.unsplash.com/photo-1596797038534-2088b76097b9?auto=format&fit=crop&q=80&w=1000', alt: 'Kerala Traditional Meal' },
   ],
   surroundings: [
     { url: 'https://images.unsplash.com/photo-1518481612222-68bbe828ecd1?auto=format&fit=crop&q=80&w=1000', alt: 'Kazhakoottam Railway Station' },
     { url: 'https://images.unsplash.com/photo-1526495124232-a04e1849168c?auto=format&fit=crop&q=80&w=1000', alt: 'Nearby Park' },
-    { url: 'https://images.unsplash.com/photo-1516938259075-0596e1231380?auto=format&fit=crop&q=80&w=1000', alt: 'Street View' },
   ],
 };
 
 // Categories
 const categories = [
   { id: 'all', label: 'All', icon: <Home size={20} /> },
-  { id: 'exterior', label: 'Exterior', icon: <Home size={20} /> },
+  { id: 'exterior', label: 'Reception', icon: <Home size={20} /> },
   { id: 'rooms', label: 'Rooms', icon: <BedDouble size={20} /> },
   { id: 'dining', label: 'Dining', icon: <UtensilsCrossed size={20} /> },
   { id: 'surroundings', label: 'Surroundings', icon: <MapPin size={20} /> },
@@ -70,7 +63,7 @@ const GalleryPage = () => {
       <Hero 
         title="Photo Gallery"
         subtitle="Take a visual tour of our hotel facilities, rooms, and surroundings."
-        imageUrl="https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&q=80&w=1000"
+        imageUrl="/lovable-uploads/36a930c0-f50c-4309-b3eb-641bdaae2cf7.png"
         height="h-[70vh]"
       />
       

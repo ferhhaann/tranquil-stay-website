@@ -7,14 +7,14 @@ import RoomCard from '@/components/RoomCard';
 import Hero from '@/components/Hero';
 import { Wifi, Tv, Wind, Coffee, UtensilsCrossed, Car, Phone } from 'lucide-react';
 
-// Sample room data
+// Sample room data with your actual images
 const premiumRooms = [
   {
     id: 1,
     title: 'Premium Double Room',
     description: 'Spacious room with a comfortable double bed, workspace, and modern amenities for a relaxing stay.',
     price: 2500,
-    imageUrl: 'https://images.unsplash.com/photo-1590490360182-c33d57733427?auto=format&fit=crop&q=80&w=1000',
+    imageUrl: '/lovable-uploads/5a781ddd-6cf3-4507-9094-af891958222f.png',
     amenities: ['Free WiFi', 'Air Conditioning', 'LCD TV', 'Room Service'],
     roomType: 'premium' as const,
     available: true,
@@ -24,7 +24,7 @@ const premiumRooms = [
     title: 'Premium Twin Room',
     description: 'Comfortable room with two single beds, ideal for friends or colleagues traveling together.',
     price: 2500,
-    imageUrl: 'https://images.unsplash.com/photo-1595576508898-0ad5c879a061?auto=format&fit=crop&q=80&w=1000',
+    imageUrl: '/lovable-uploads/5a781ddd-6cf3-4507-9094-af891958222f.png',
     amenities: ['Free WiFi', 'Air Conditioning', 'LCD TV', 'Tea/Coffee Maker'],
     roomType: 'premium' as const,
     available: true,
@@ -34,7 +34,7 @@ const premiumRooms = [
     title: 'Premium Family Room',
     description: 'Spacious room with a double bed and a single bed, perfect for small families or groups.',
     price: 3000,
-    imageUrl: 'https://images.unsplash.com/photo-1591088398332-8a7791972843?auto=format&fit=crop&q=80&w=1000',
+    imageUrl: '/lovable-uploads/5a781ddd-6cf3-4507-9094-af891958222f.png',
     amenities: ['Free WiFi', 'Air Conditioning', 'LCD TV', 'Mini Fridge'],
     roomType: 'premium' as const,
     available: false,
@@ -44,7 +44,7 @@ const premiumRooms = [
     title: 'Premium Business Room',
     description: 'Well-equipped room with a work desk, ergonomic chair, and business amenities for professional travelers.',
     price: 2800,
-    imageUrl: 'https://images.unsplash.com/photo-1566665797739-1674de7a421a?auto=format&fit=crop&q=80&w=1000',
+    imageUrl: '/lovable-uploads/5a781ddd-6cf3-4507-9094-af891958222f.png',
     amenities: ['Free WiFi', 'Air Conditioning', 'Work Desk', 'Breakfast Included'],
     roomType: 'premium' as const,
     available: true,
@@ -57,7 +57,7 @@ const deluxeRooms = [
     title: 'Deluxe Single Room',
     description: 'Cozy room with a single bed, perfect for solo travelers seeking comfort and convenience.',
     price: 1800,
-    imageUrl: 'https://images.unsplash.com/photo-1566665797739-1674de7a421a?auto=format&fit=crop&q=80&w=1000',
+    imageUrl: '/lovable-uploads/d650882c-efde-445a-ae60-176c5ac0facb.png',
     amenities: ['Free WiFi', 'Air Conditioning', 'Cable TV', 'Desk'],
     roomType: 'deluxe' as const,
     available: true,
@@ -67,7 +67,7 @@ const deluxeRooms = [
     title: 'Deluxe Double Room',
     description: 'Comfortable room with a double bed, suitable for couples or solo travelers who prefer more space.',
     price: 2000,
-    imageUrl: 'https://images.unsplash.com/photo-1598928636135-d146006ff4be?auto=format&fit=crop&q=80&w=1000',
+    imageUrl: '/lovable-uploads/d650882c-efde-445a-ae60-176c5ac0facb.png',
     amenities: ['Free WiFi', 'Air Conditioning', 'TV', 'Private Bathroom'],
     roomType: 'deluxe' as const,
     available: true,
@@ -77,7 +77,7 @@ const deluxeRooms = [
     title: 'Deluxe Twin Room',
     description: 'Practical room with two single beds, ideal for friends or family members traveling together.',
     price: 2000,
-    imageUrl: 'https://images.unsplash.com/photo-1595576508898-0ad5c879a061?auto=format&fit=crop&q=80&w=1000',
+    imageUrl: '/lovable-uploads/d650882c-efde-445a-ae60-176c5ac0facb.png',
     amenities: ['Free WiFi', 'Air Conditioning', 'TV', 'Desk'],
     roomType: 'deluxe' as const,
     available: false,
@@ -87,7 +87,7 @@ const deluxeRooms = [
     title: 'Deluxe Triple Room',
     description: 'Spacious room with three single beds, perfect for small groups or families.',
     price: 2200,
-    imageUrl: 'https://images.unsplash.com/photo-1591088398332-8a7791972843?auto=format&fit=crop&q=80&w=1000',
+    imageUrl: '/lovable-uploads/d650882c-efde-445a-ae60-176c5ac0facb.png',
     amenities: ['Free WiFi', 'Air Conditioning', 'TV', 'Private Bathroom'],
     roomType: 'deluxe' as const,
     available: true,
@@ -97,7 +97,7 @@ const deluxeRooms = [
     title: 'Deluxe Budget Room',
     description: 'Economical room with essential amenities for budget-conscious travelers.',
     price: 1500,
-    imageUrl: 'https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&q=80&w=1000',
+    imageUrl: '/lovable-uploads/d650882c-efde-445a-ae60-176c5ac0facb.png',
     amenities: ['Free WiFi', 'Fan', 'TV', 'Shared Bathroom'],
     roomType: 'deluxe' as const,
     available: true,
@@ -107,7 +107,7 @@ const deluxeRooms = [
     title: 'Deluxe Compact Room',
     description: 'Neat and compact room with a comfortable bed and basic amenities for short stays.',
     price: 1600,
-    imageUrl: 'https://images.unsplash.com/photo-1566195992011-5f6b21e539aa?auto=format&fit=crop&q=80&w=1000',
+    imageUrl: '/lovable-uploads/d650882c-efde-445a-ae60-176c5ac0facb.png',
     amenities: ['Free WiFi', 'Air Conditioning', 'TV', 'Desk'],
     roomType: 'deluxe' as const,
     available: true,
@@ -134,7 +134,7 @@ const Rooms = () => {
       <Hero 
         title="Rooms & Accommodations"
         subtitle="Discover our range of comfortable and affordable rooms designed for your relaxing stay."
-        imageUrl="https://images.unsplash.com/photo-1590490360182-c33d57733427?auto=format&fit=crop&q=80&w=1000"
+        imageUrl="/lovable-uploads/5a781ddd-6cf3-4507-9094-af891958222f.png"
         height="h-[70vh]"
       />
       
