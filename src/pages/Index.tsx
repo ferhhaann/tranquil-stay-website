@@ -14,21 +14,30 @@ import { Link } from 'react-router-dom';
 const featuredRooms = [
   {
     id: 1,
-    title: 'Premium Double Room',
+    title: 'Premium Room',
     description: 'Spacious room with a comfortable double bed, workspace, and modern amenities for a relaxing stay.',
-    price: 2500,
-    imageUrl: '/lovable-uploads/5a781ddd-6cf3-4507-9094-af891958222f.png',
+    price: 1999,
+    imageUrl: '/lovable-uploads/e6a1b9b2-f3fa-4e45-bd18-6b4d08250cf3.png',
     amenities: ['Free WiFi', 'Air Conditioning', 'LCD TV', 'Room Service'],
     roomType: 'premium' as const,
   },
   {
     id: 2,
-    title: 'Deluxe Single Room',
-    description: 'Cozy room with a single bed, perfect for solo travelers seeking comfort and convenience.',
-    price: 1800,
-    imageUrl: '/lovable-uploads/d650882c-efde-445a-ae60-176c5ac0facb.png',
-    amenities: ['Free WiFi', 'Air Conditioning', 'Cable TV', 'Desk'],
+    title: 'Deluxe Room',
+    description: 'Comfortable room with essential amenities, perfect for travelers seeking value and convenience.',
+    price: 1699,
+    imageUrl: '/lovable-uploads/93f731d3-2359-4a2e-bdb2-ac7e81a93aae.png',
+    amenities: ['Free WiFi', 'Air Conditioning', 'TV', 'Desk'],
     roomType: 'deluxe' as const,
+  },
+  {
+    id: 3,
+    title: 'Family Room',
+    description: 'Spacious room designed for families, with multiple beds and amenities to ensure a comfortable stay for everyone.',
+    price: 2200,
+    imageUrl: '/lovable-uploads/93f731d3-2359-4a2e-bdb2-ac7e81a93aae.png',
+    amenities: ['Free WiFi', 'Air Conditioning', 'LCD TV', 'Extra Beds'],
+    roomType: 'premium' as const,
   },
 ];
 
@@ -156,7 +165,7 @@ const Index = () => {
           </motion.div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {featuredRooms.map((room, index) => (
+            {featuredRooms.slice(0, 2).map((room, index) => (
               <motion.div
                 key={room.id}
                 initial={{ opacity: 0, y: 20 }}
@@ -182,7 +191,7 @@ const Index = () => {
             >
               <h3 className="text-xl font-semibold text-hotel-navy mb-3">Discover More Rooms</h3>
               <p className="text-gray-600 text-center mb-6">
-                Explore our full range of Premium and Deluxe rooms for your perfect stay.
+                Explore our full range of Premium, Family, and Deluxe rooms for your perfect stay.
               </p>
               <Link
                 to="/rooms"

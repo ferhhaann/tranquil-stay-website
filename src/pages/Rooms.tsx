@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { motion } from 'framer-motion';
 import Navbar from '@/components/Navbar';
@@ -7,45 +6,15 @@ import RoomCard from '@/components/RoomCard';
 import Hero from '@/components/Hero';
 import { Wifi, Tv, Wind, Coffee, UtensilsCrossed, Car, Phone } from 'lucide-react';
 
-// Sample room data with your actual images
+// Updated room data with correct pricing and options
 const premiumRooms = [
   {
     id: 1,
-    title: 'Premium Double Room',
+    title: 'Premium Room',
     description: 'Spacious room with a comfortable double bed, workspace, and modern amenities for a relaxing stay.',
-    price: 2500,
-    imageUrl: '/lovable-uploads/5a781ddd-6cf3-4507-9094-af891958222f.png',
+    price: 1999,
+    imageUrl: '/lovable-uploads/e6a1b9b2-f3fa-4e45-bd18-6b4d08250cf3.png',
     amenities: ['Free WiFi', 'Air Conditioning', 'LCD TV', 'Room Service'],
-    roomType: 'premium' as const,
-    available: true,
-  },
-  {
-    id: 2,
-    title: 'Premium Twin Room',
-    description: 'Comfortable room with two single beds, ideal for friends or colleagues traveling together.',
-    price: 2500,
-    imageUrl: '/lovable-uploads/5a781ddd-6cf3-4507-9094-af891958222f.png',
-    amenities: ['Free WiFi', 'Air Conditioning', 'LCD TV', 'Tea/Coffee Maker'],
-    roomType: 'premium' as const,
-    available: true,
-  },
-  {
-    id: 3,
-    title: 'Premium Family Room',
-    description: 'Spacious room with a double bed and a single bed, perfect for small families or groups.',
-    price: 3000,
-    imageUrl: '/lovable-uploads/5a781ddd-6cf3-4507-9094-af891958222f.png',
-    amenities: ['Free WiFi', 'Air Conditioning', 'LCD TV', 'Mini Fridge'],
-    roomType: 'premium' as const,
-    available: false,
-  },
-  {
-    id: 4,
-    title: 'Premium Business Room',
-    description: 'Well-equipped room with a work desk, ergonomic chair, and business amenities for professional travelers.',
-    price: 2800,
-    imageUrl: '/lovable-uploads/5a781ddd-6cf3-4507-9094-af891958222f.png',
-    amenities: ['Free WiFi', 'Air Conditioning', 'Work Desk', 'Breakfast Included'],
     roomType: 'premium' as const,
     available: true,
   },
@@ -53,63 +22,26 @@ const premiumRooms = [
 
 const deluxeRooms = [
   {
-    id: 5,
-    title: 'Deluxe Single Room',
-    description: 'Cozy room with a single bed, perfect for solo travelers seeking comfort and convenience.',
-    price: 1800,
-    imageUrl: '/lovable-uploads/d650882c-efde-445a-ae60-176c5ac0facb.png',
-    amenities: ['Free WiFi', 'Air Conditioning', 'Cable TV', 'Desk'],
-    roomType: 'deluxe' as const,
-    available: true,
-  },
-  {
-    id: 6,
-    title: 'Deluxe Double Room',
-    description: 'Comfortable room with a double bed, suitable for couples or solo travelers who prefer more space.',
-    price: 2000,
-    imageUrl: '/lovable-uploads/d650882c-efde-445a-ae60-176c5ac0facb.png',
-    amenities: ['Free WiFi', 'Air Conditioning', 'TV', 'Private Bathroom'],
-    roomType: 'deluxe' as const,
-    available: true,
-  },
-  {
-    id: 7,
-    title: 'Deluxe Twin Room',
-    description: 'Practical room with two single beds, ideal for friends or family members traveling together.',
-    price: 2000,
-    imageUrl: '/lovable-uploads/d650882c-efde-445a-ae60-176c5ac0facb.png',
+    id: 2,
+    title: 'Deluxe Room',
+    description: 'Comfortable room with essential amenities, perfect for travelers seeking value and convenience.',
+    price: 1699,
+    imageUrl: '/lovable-uploads/93f731d3-2359-4a2e-bdb2-ac7e81a93aae.png',
     amenities: ['Free WiFi', 'Air Conditioning', 'TV', 'Desk'],
     roomType: 'deluxe' as const,
-    available: false,
+    available: true,
   },
+];
+
+const familyRooms = [
   {
-    id: 8,
-    title: 'Deluxe Triple Room',
-    description: 'Spacious room with three single beds, perfect for small groups or families.',
+    id: 3,
+    title: 'Family Room',
+    description: 'Spacious room designed for families, with multiple beds and amenities to ensure a comfortable stay for everyone.',
     price: 2200,
-    imageUrl: '/lovable-uploads/d650882c-efde-445a-ae60-176c5ac0facb.png',
-    amenities: ['Free WiFi', 'Air Conditioning', 'TV', 'Private Bathroom'],
-    roomType: 'deluxe' as const,
-    available: true,
-  },
-  {
-    id: 9,
-    title: 'Deluxe Budget Room',
-    description: 'Economical room with essential amenities for budget-conscious travelers.',
-    price: 1500,
-    imageUrl: '/lovable-uploads/d650882c-efde-445a-ae60-176c5ac0facb.png',
-    amenities: ['Free WiFi', 'Fan', 'TV', 'Shared Bathroom'],
-    roomType: 'deluxe' as const,
-    available: true,
-  },
-  {
-    id: 10,
-    title: 'Deluxe Compact Room',
-    description: 'Neat and compact room with a comfortable bed and basic amenities for short stays.',
-    price: 1600,
-    imageUrl: '/lovable-uploads/d650882c-efde-445a-ae60-176c5ac0facb.png',
-    amenities: ['Free WiFi', 'Air Conditioning', 'TV', 'Desk'],
-    roomType: 'deluxe' as const,
+    imageUrl: '/lovable-uploads/93f731d3-2359-4a2e-bdb2-ac7e81a93aae.png',
+    amenities: ['Free WiFi', 'Air Conditioning', 'LCD TV', 'Extra Beds'],
+    roomType: 'premium' as const,
     available: true,
   },
 ];
@@ -134,7 +66,7 @@ const Rooms = () => {
       <Hero 
         title="Rooms & Accommodations"
         subtitle="Discover our range of comfortable and affordable rooms designed for your relaxing stay."
-        imageUrl="/lovable-uploads/5a781ddd-6cf3-4507-9094-af891958222f.png"
+        imageUrl="/lovable-uploads/e6a1b9b2-f3fa-4e45-bd18-6b4d08250cf3.png"
         height="h-[70vh]"
       />
       
@@ -193,6 +125,46 @@ const Rooms = () => {
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {premiumRooms.map((room, index) => (
+              <motion.div
+                key={room.id}
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 0.1 * index }}
+              >
+                <RoomCard
+                  title={room.title}
+                  description={room.description}
+                  price={room.price}
+                  imageUrl={room.imageUrl}
+                  amenities={room.amenities}
+                  roomType={room.roomType}
+                  available={room.available}
+                />
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+      
+      {/* Family Rooms Section */}
+      <section className="py-16 px-6 bg-hotel-beige/30">
+        <div className="container mx-auto">
+          <motion.div 
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            className="mb-12"
+          >
+            <h2 className="text-3xl font-semibold text-hotel-navy mb-4">
+              Family Rooms
+            </h2>
+            <p className="text-gray-600 max-w-3xl">
+              Our Family rooms are specially designed to accommodate families with spacious layouts and family-friendly amenities.
+            </p>
+          </motion.div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {familyRooms.map((room, index) => (
               <motion.div
                 key={room.id}
                 initial={{ opacity: 0, y: 20 }}
