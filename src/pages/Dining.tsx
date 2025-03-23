@@ -1,10 +1,9 @@
-
 import React from 'react';
 import { motion } from 'framer-motion';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import Hero from '@/components/Hero';
-import { Clock, UtensilsCrossed, Coffee, Salad, Pizza, Soup } from 'lucide-react';
+import { Clock, UtensilsCrossed, Coffee, Salad, Pizza, Soup, Phone } from 'lucide-react';
 
 // Sample meal options
 const mealOptions = [

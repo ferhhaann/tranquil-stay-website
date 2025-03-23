@@ -18,7 +18,7 @@ import {
   Utensils,
   Loader2,
   PersonStanding,
-  FirstAid,
+  AlertCircle, // Replaced FirstAid with AlertCircle
   Luggage,
   Shirt
 } from 'lucide-react';
@@ -68,7 +68,7 @@ const additionalServices = [
   {
     name: 'First Aid',
     description: 'Basic medical supplies available at reception for emergencies.',
-    icon: <FirstAid size={24} className="text-hotel-navy" />
+    icon: <AlertCircle size={24} className="text-hotel-navy" /> // Updated to use AlertCircle
   },
   {
     name: 'Wake-up Call',
