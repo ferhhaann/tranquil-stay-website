@@ -14,8 +14,8 @@ const hotelImages = {
     { url: '/lovable-uploads/9b485332-9ab6-443d-8bc3-35b8f0c2a441.png', alt: 'Hotel Exterior View' },
   ],
   rooms: [
-    { url: '/lovable-uploads/5a781ddd-6cf3-4507-9094-af891958222f.png', alt: 'Premium Double Room' },
-    { url: '/lovable-uploads/d650882c-efde-445a-ae60-176c5ac0facb.png', alt: 'Deluxe Room' },
+    { url: '/lovable-uploads/room-3.jpg.JPG', alt: 'Premium Double Room' },
+    { url: '/lovable-uploads/room-2.jpg.JPG', alt: 'Deluxe Room' },
   ],
   dining: [
     { url: 'https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&q=80&w=1000', alt: 'Dining Area' },
